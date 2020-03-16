@@ -18,7 +18,6 @@ def translate(w):
     elif len(closematch)>0:
         for i in range(0,len(closematch)):
             correction = tk.messagebox.askyesno(title="Spell Error",message="You entered {}.\nDid you mean {} instead?" .format(w,closematch[i])) 
-            # input(( "Did you mean %s instead?" % closematch[i]))
             if correction:
                 return data[closematch[i]]
                 break
@@ -43,10 +42,7 @@ def output(meaning):
 window = tk.Tk()
 window.title("Dictionary by Roshan Srivastava")
 window.configure(bg='#008080')
-window.geometry("700x400")
-
-# photo = tk.PhotoImage(file = "assets/dictionary.gif")
-# tk.Label(window,image=photo,bg="#008080").grid(row = 2,column = 1,rowspan =1,sticky="e")
+window.geometry("800x400")
 
 def click():
     word = text.get()
